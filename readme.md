@@ -18,6 +18,7 @@ To achieve this purpose you need to use the I18nRoute class that is provided in 
 
 	define('DEFAULT_LANGUAGE', 'eng'); // The 3 letters code for your default language
 	Configure::write('Config.languages', array('eng', 'deu', 'fre', 'jpn', 'spa', 'rus')); //List of languages you want to support
+	Configure::write('Config.Route.showDefaultLanguage', true); // Force use default language as prefix and not hide.
 	CakePlugin::load('I18n', array('routes' => true));
 
 Now let's start using the new Route class to support the new internationalized urls. Open your app/Config/routes.php and make it look like this:
